@@ -48,13 +48,13 @@ class PageBrowse extends SystemManagedList {
     const urlParams = getParamsFromUrl(this.props.location.search)
     urlParams
       ? this.setState(
-        {
-          activeSort: urlParams.sort && urlParams.sort,
-          activeName: urlParams.name && urlParams.name,
-          activeFilters: omit(urlParams, ['sort', 'name'])
-        },
-        () => this.updateData()
-      )
+          {
+            activeSort: urlParams.sort && urlParams.sort,
+            activeName: urlParams.name && urlParams.name,
+            activeFilters: omit(urlParams, ['sort', 'name'])
+          },
+          () => this.updateData()
+        )
       : this.updateData()
   }
 
@@ -334,13 +334,13 @@ class PageBrowse extends SystemManagedList {
           <div className="col-12">
             <Section
               className="flex-grow-column clearly-component-wrap"
-            // name={this.tableTitle()}
-            // actionButton={this.renderButtons()}
+              // name={this.tableTitle()}
+              // actionButton={this.renderButtons()}
             >
               <div className={classNames('clearly-table flex-grow', { loading: components.isFetching })}>
                 <i className="fas fa-spinner fa-spin" />
                 <ComponentList
-                  aria-role="row"
+                  // aria-role="row"  //this prop is not listed/not used in ComponentList
                   multiSelectEnabled={this.multiSelectEnabled}
                   readOnly={false}
                   list={components.transformedList}

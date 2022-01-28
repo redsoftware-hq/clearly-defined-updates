@@ -174,7 +174,7 @@ class GetInvolved extends Component {
                     <img src={item.img} alt="335group" />
                     <h3 className="community-item-name">{item.name}</h3>
                     <p className="community-item-discription">{item.text}</p>
-                    <a href="#" className="community-item-link">
+                    <a href="/#" className="community-item-link">
                       {item.linkText}
                     </a>
                   </Col>

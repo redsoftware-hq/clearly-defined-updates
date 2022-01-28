@@ -83,7 +83,6 @@ class PageAbout extends Component {
     return (
       <>
         <div className="about-container">
-
           <div className="about-hero">
             <div className="container">
               <div className="about-hero__content">
@@ -91,7 +90,9 @@ class PageAbout extends Component {
                 <p className="about-description">
                   Welcome to your centralized and curated data store for Open Source Software licenses.
                 </p>
-                <a className="btn-mkt" href="/get-involved">Get Involved</a>
+                <a className="btn-mkt" href="/get-involved">
+                  Get Involved
+                </a>
               </div>
             </div>
           </div>
@@ -145,7 +146,9 @@ class PageAbout extends Component {
               <div>
                 <div className="mkt-h4 pb-4">Goals</div>
                 <div className="mkt-h2">This is a community-wide challenge that needs a community-wide approach.</div>
-                <a className="learn-more" href="/stats">Learn more</a>
+                <a className="learn-more" href="/stats">
+                  Learn more
+                </a>
               </div>
               <div className="left-top"></div>
               <div className="right-top"></div>
@@ -173,7 +176,7 @@ class PageAbout extends Component {
                       <img src={item.img} alt="335group" />
                       <h3 className="community-item-name">{item.name}</h3>
                       <p className="community-item-discription">{item.text}</p>
-                      <a href="#" className="community-item-link">
+                      <a href="/#" className="community-item-link">
                         {item.linkText}
                       </a>
                     </Col>
