@@ -1,0 +1,66 @@
+/* Copyright (c) Microsoft Corporation and others. */
+/* SPDX-License-Identifier: MIT */
+
+.navbar {
+  border-radius: 0;
+  border-width: 0;
+  margin-bottom: 50px;
+  min-height: 80px;
+  z-index: 1;
+
+  @media screen and (max-width: $screen-md) {
+    margin-bottom: 0;
+  }
+
+  .navbar-brand {
+    margin: 10px;
+    padding: 0 20px 0 0;
+    height: 60px;
+    align-self: center;
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      padding: 0;
+    }
+  }
+
+  .navbar-nav {
+    > li {
+      > a {
+        font-weight: 600;
+        font-size: 1.1em;
+        color: $color-text-light;
+        padding-top: 30px;
+        padding-bottom: 0;
+        &:hover,
+        &:focus {
+          color: $color_highlight;
+        }
+
+        @media screen and (max-width: $screen-md) {
+          padding-top: 15px;
+          padding-bottom: 5px;
+        }
+      }
+    }
+    > .active {
+      > a {
+        color: $color_highlight;
+        background-color: transparent;
+        &:hover,
+        &:focus {
+          color: $color_highlight;
+          background-color: transparent;
+        }
+        div {
+          padding-bottom: 6px;
+          border-bottom-color: $color_highlight;
+          border-bottom-style: solid;
+          border-bottom-width: 4px;
+        }
+      }
+    }
+  }
+}

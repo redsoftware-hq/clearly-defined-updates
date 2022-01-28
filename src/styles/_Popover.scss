@@ -1,0 +1,54 @@
+.popoverRenderer {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: auto;
+  width: 100%;
+}
+.popoverRenderer__container {
+  width: 500px;
+}
+.popoverRenderer__title,
+.popoverRenderer__items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popoverRenderer__title__buttons,
+.popoverRenderer__items__buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.popoverRenderer__items__formGroup {
+  margin-bottom: 0px;
+}
+.popoverRenderer__items__value {
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.popoverRenderer__items__value--isEdited {
+  color: $color_red;
+}
+.popoverRenderer__items__formControl {
+  width: 200px;
+}
+.popoverRenderer_scrollY {
+  .list-singleLine {
+    overflow: visible;
+  }
+
+  .popoverRenderer__items__value {
+    overflow: visible;
+  }
+}
+
+.popoverSpan {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+}

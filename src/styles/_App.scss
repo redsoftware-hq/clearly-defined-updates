@@ -1,0 +1,533 @@
+/* Copyright (c) Microsoft Corporation and others. Licensed under the MIT license. */
+/* SPDX-License-Identifier: MIT */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.App-content {
+  .cd-badge {
+    font-size: 12px;
+    font-weight: normal;
+    height: 20px;
+    line-height: 0.1;
+    padding: 8px 4px 1px 4px;
+  }
+}
+
+.App-logo {
+  height: 150px;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.main-container {
+  height: 100%;
+
+  h1 {
+    font-size: $size-text-banner;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: $size-text-message;
+    color: $color-text-main;
+    text-align: center;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: $size-text-message / 1.5;
+    }
+  }
+
+  h3 {
+    font-size: 1.6em;
+    line-height: 1.3;
+
+    @media (max-width: $screen-sm) {
+      font-size: calc(1.6em / 1.5);
+    }
+  }
+
+  .valign-child {
+    align-self: center;
+  }
+
+  .neighborhood-row {
+    padding-top: 60px;
+    display: flex;
+    min-height: 150px;
+  }
+
+  .neighborhood-icon {
+    font-size: 10rem;
+    color: $color_primary;
+    text-align: center;
+
+    @media (max-width: $screen-sm) {
+      font-size: 4.3rem;
+    }
+  }
+
+  .neighborhood-logo {
+    width: 100px;
+
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
+  }
+
+  .about-cell {
+    display: flex;
+    min-height: 170px;
+
+    @media (max-width: $screen-sm) {
+      min-height: 150px;
+    }
+  }
+
+  .about-image {
+    align-self: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.about-container {
+  font-size: 1.25em;
+  @media (max-width: $screen-sm) {
+    margin-top: -80px;
+  }
+
+  .center-block {
+    vertical-align: top;
+  }
+}
+
+.labelled-button {
+  display: inline-block;
+  width: 100%;
+
+  .btn {
+    margin-left: 10px;
+  }
+}
+
+.placeholder-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bdbdbd;
+  height: 100%;
+}
+
+.spacer-search {
+  margin: 3rem;
+
+  @media screen and (max-width: $screen-sm) {
+    margin: 4rem 1rem 1rem;
+  }
+}
+
+.section-body {
+  border: 1px solid lightgray;
+  box-shadow: 5px 5px 20px -10px lightgrey;
+  display: flex;
+  min-height: 200px;
+  padding-bottom: $height-filters-section;
+
+  .fa-spinner {
+    display: none;
+  }
+
+  &.loading {
+    position: relative;
+
+    & > div {
+      transition: opacity 0.2s;
+      opacity: 0.7;
+    }
+
+    .fa-spinner {
+      display: block;
+      position: absolute;
+      font-size: 6rem;
+      left: 0;
+      right: 0;
+      text-align: center;
+      top: 70px;
+    }
+  }
+}
+
+.section-header {
+  padding-top: 30px;
+  padding-bottom: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: $screen-sm) {
+    padding-top: 20px;
+  }
+}
+
+.section-title {
+  font-size: 2em;
+
+  @media screen and (max-width: $screen-lg) {
+    font-size: 1.5em;
+  }
+
+  .cd-badge {
+    margin-bottom: 3px;
+    vertical-align: middle;
+  }
+}
+
+.section-button,
+.list-activity-area,
+.filter-bar {
+  // same as .btn-sm
+  @media screen and (max-width: $screen-md) {
+    .btn {
+      padding: 5px 10px;
+      font-size: 12px;
+      line-height: 1.5;
+      border-radius: 3px;
+    }
+  }
+
+  // same as .btn-xs
+  @media screen and (max-width: $screen-sm) {
+    .btn {
+      padding: 1px 5px;
+      font-size: 12px;
+      line-height: 1.5;
+      border-radius: 3px;
+    }
+  }
+}
+
+#buttonbar-collapse,
+.dropdown-menu-right {
+  padding: 0;
+  margin: -1px 0 0;
+  border: 1px;
+}
+
+.section-body {
+  // same as .btn-sm
+  @media screen and (max-width: $screen-md) {
+    .btn {
+      padding: 5px 10px;
+      font-size: 12px;
+      line-height: 1.5;
+      border-radius: 3px;
+    }
+  }
+}
+
+.buttons-bar {
+  .btn-group,
+  .btn {
+    margin-left: 3px;
+  }
+}
+
+.editable-field {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.editable-marker {
+  font-size: x-small;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+.editable-editor {
+  display: inline-block;
+
+  @media screen and (max-width: $screen-sm) {
+    overflow: auto;
+    white-space: nowrap;
+
+    > .ant-tag {
+      font-size: smaller;
+      margin-right: 0;
+      padding: 0 5px;
+      white-space: nowrap;
+    }
+  }
+}
+
+.placeholder-text {
+  color: #bdbdbd;
+}
+
+.two-line-entry {
+  display: flex;
+  flex-direction: column;
+}
+
+.definition {
+  &__line {
+    height: 25px;
+    display: flex;
+  }
+
+  &__overlay-hover-catcher {
+    height: 20px;
+    max-width: 100%;
+  }
+  &__tooltip {
+    overflow-wrap: break-word;
+  }
+}
+
+.dropdown-menu .page-definitions__menu-item > a {
+  display: flex;
+  & > span:first-child {
+    flex-grow: 1;
+  }
+
+  & > .fas {
+    margin: 3px 0 0 10px;
+  }
+}
+
+.fa-disabled {
+  opacity: 0.5;
+}
+
+.dropdown-menu {
+  z-index: 9001;
+}
+
+.horizontalBlock {
+  display: flex;
+  align-items: center;
+}
+
+.bg-suggested {
+  background: green;
+  color: white;
+  padding: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 4px;
+}
+
+.copyrightContainer {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tooltip {
+  z-index: 99999999;
+}
+
+.tooltipWrapper {
+  display: inline-block;
+}
+
+.tooltipWrapper [disabled] {
+  pointer-events: none;
+}
+
+.section-button {
+  text-align: right;
+}
+
+hr {
+  margin: 75px 0;
+}
+
+.section--filter-bar {
+  .checkbox {
+    margin: 6px;
+  }
+
+  .list-singleLine {
+    display: inline-flex;
+  }
+
+  .placeholder-text,
+  .rbt-input-main::placeholder {
+    color: #333;
+  }
+}
+
+.component-list {
+  .form-group.flex-grow-column {
+    height: 100%;
+    width: 100%;
+
+    .checkbox {
+      margin-left: 6px;
+    }
+  }
+}
+
+.ant-checkbox-wrapper {
+  height: 27px;
+}
+
+.rbt-input.form-control {
+  padding: 5px 17px;
+}
+
+.ReactVirtualized__Grid__innerScrollContainer {
+  overflow: visible !important;
+}
+
+.section-header div:nth-child(2) {
+  align-self: flex-end;
+}
+
+.section-button .text-right > .btn,
+.section-button .text-right > .dropdown {
+  margin-left: 3px;
+
+  @media (max-width: $screen-sm-max) {
+    margin-bottom: 1px;
+    margin-left: 2px;
+  }
+}
+
+.browse-page {
+  // negative margin to reduce the .navbar min-height
+  margin-top: -40px;
+}
+
+.selector-picker {
+  width: 50%;
+  margin-right: 4px;
+}
+
+.active-filters {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.ant-dropdown-menu-item {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.component-checkbox {
+  margin-top: 15px;
+}
+
+.selected-definitions {
+  display: flex;
+  align-items: center;
+  span {
+    margin-right: 7px;
+  }
+  input[type='checkbox'] {
+    margin-top: 8px;
+  }
+}
+
+.section--filter-bar {
+  background: $filters-background-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $height-filters-section;
+}
+
+.activeFilters {
+  display: flex;
+  align-items: center;
+  .filters-label {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  .btn {
+    width: 50px;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+  }
+}
+
+.date-picker {
+  position: relative;
+  width: 150px !important;
+  height: 20px !important;
+  color: white;
+
+  &:before {
+    display: flex;
+    align-items: center;
+    content: attr(data-date);
+    color: black;
+  }
+
+  &::-webkit-datetime-edit,
+  &::-webkit-inner-spin-button,
+  &::-webkit-clear-button {
+    display: none;
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    color: black;
+    opacity: 1;
+  }
+}
+
+.filterBar-itemRenderer {
+  color: black !important;
+  img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.fullscreen-loader {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  .ant-spin-dot {
+    color: $color_primary;
+  }
+}
+
+.definition-revision {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 200px;
+  height: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,17 @@
+.license--isEdited {
+  background: $color_red;
+  color: white;
+  padding: 10px;
+}
+
+.license-renderer {
+  max-width: 100%;
+  & > div {
+    float: left;
+  }
+  .license-advanced {
+    font-size: 1.2rem;
+    margin-left: 7px;
+    cursor: pointer;
+  }
+}

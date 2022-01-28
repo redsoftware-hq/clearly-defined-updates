@@ -1,0 +1,101 @@
+/* Copyright (c) Microsoft Corporation and others. Licensed under the MIT license. */
+/* SPDX-License-Identifier: MIT */
+
+// modifications to the standard bootstrap styles
+.panel-heading a {
+  cursor: pointer;
+}
+
+.badge {
+  color: #4d2c2c;
+  background-color: #dddddd;
+  font-weight: 400;
+}
+
+.dropdown-menu {
+  min-width: 67px;
+}
+
+.center-block {
+  display: inline-block;
+  float: none;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  background-color: #222;
+}
+
+@media screen and (max-width: $screen-sm) {
+  .navbar-collapse {
+    padding-top: 15.5px;
+    padding-bottom: 15.5px;
+  }
+
+  .navbar-nav {
+    margin: 0 -15px;
+  }
+}
+
+.navbar-toggle {
+  margin-top: 23px;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.btn-success,
+.ant-btn-primary {
+  background-color: $color_highlight !important;
+  border-color: $color_highlight !important;
+}
+
+.ant-btn {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.ant-btn-secondary {
+  &:hover {
+    color: #d9d9d9 !important;
+    border-color: #d9d9d9 !important;
+  }
+}
+
+.btn-danger {
+  background-color: $color_red;
+  border-color: $color_red;
+}
+
+.ant-tag-purple {
+  color: white;
+  background: #6f42c1;
+  border-color: #6f42c1;
+}
+
+.ant-tag-green {
+  color: white;
+  background: $color_highlight;
+  border-color: $color_highlight;
+}
+
+.ant-tag-red {
+  color: white;
+  background: $color_red;
+  border-color: $color_red;
+}
+
+.ant-tag {
+  line-height: 18px;
+}
+
+@media (min-width: $screen-md) {
+  .modal-xl .modal-dialog {
+    width: 1220px;
+  }
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
